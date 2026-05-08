@@ -43,7 +43,7 @@ public class Curves {
     private Point start, p1, p2, end;
 
     private double[] arctable;
-    private double arclength;
+    double arclength;
 
     public Curves(Point start, Point p1, Point p2, Point end){
         this.start = start;
