@@ -26,7 +26,8 @@ profile: the "motion profile" of your path following. Should be a MoveScum objec
 heading/theta: What angle you want your robot to be facing when moving. Note that this will execute first before any other movements. 0 will be the direction you face it when you init the robot.
 
 # You absolute clowns.
-That should be all the important bits. Special Thanks to 9266 Pyrobots and 4262 Ridgebots for moral support. I expect you bums to reach Worlds next year or I'll be disappointed
+That should be all the important bits. 
+Special thanks to 9266 Pyrobots and 4262 Ridgebots for moral support. I expect you bums to reach Worlds next year or I'll be disappointed.
 This was a completely homebrew project for my team, I expect my teams, if no one else, to be using this library at least until a better option is found or created.
 
 Zhixun Wang, out.
