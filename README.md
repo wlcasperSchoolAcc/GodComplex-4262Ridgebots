@@ -25,6 +25,7 @@ path: the path you want it to move along, should be a Curves object
 profile: the "motion profile" of your path following. Should be a MoveScum object
 heading/theta: What angle you want your robot to be facing when moving. Note that this will execute first before any other movements. 0 will be the direction you face it when you init the robot.
 
+# You absolute clowns.
 That should be all the important bits. Join 9266 Pyrobots and 4262 Ridgebots at Pacific Ridge School to receive more specific tutelage from our team members.
 This was a completely homebrew project for my team, I expect my teams, if no one else, to be using this library at least until a better option is found or created.
 
