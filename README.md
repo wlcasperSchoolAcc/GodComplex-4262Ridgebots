@@ -1,2 +1,31 @@
-# GodComplex-4262Ridgebots
-yeah uh dw about it
+## GodComplex-4262Ridgebots
+
+Now that functionality has been completed, this will be an in-depth tutorial regarding this system.
+
+# Overview
+Put simply, you put in 4 points, of x and y, and specify a heading, theta. The first and last points are your start and end. The second and third points build a Bezier Curve (shown in Curves, if you want to figure out the algorithm yourself). The robot might not explicitly pass through these secondary points, but they influence the robot's path, allowing it to maneuver around obstacles in one smooth motion
+
+# Downloads and Setup
+You will need every single Java file for this to work. Furthermore, you will need to check the offsets of your odometry pods for the rotation system to work. Grab a ruler, and measure in millimeters. I repeat, MM, from the odo-pods to your robot center.
+
+Next, ensure your GoBilda odometry computer is set up. You will need a test code to check which directions the odometry pods are in. After setting that up, move the robot in the direction of the arrows. The values should increase positively. If it does not, reverse the direction in CustomDrive. Additionally, make sure your motors are set up so that when going forward, all 4 motors have the same power values (which should be 1). If they are not, reverse some of them.
+
+# Necessary Disclaimer
+If at this point you're asking me "How do I reverse a motor", you should not be looking at this, and should instead focus on learning the FTC documentation first.
+
+# MoveScum
+You only need to know two values here. MaxV and MaxA. They stand for velocity and acceleration respectively. Basically, they control how fast your robot starts to move and its top speed. If they are too high, the robot may just catapult itself into a wall, so be careful with this. Do not change anything inside the actual program, only through GodObject.
+
+# GodObject
+After setup, this should be the only program you change on a regular basis. As stated in Overview, you will see a part with 4 points. Those are where you actually control the robot movements. There are two as of right now. To add more, simply make more Curves Objects, and more MoveScums if you need. Then, call followPath() inside the Opmode if statement. 
+
+# followPath()
+followPath() takes 3 values:
+path: the path you want it to move along, should be a Curves object
+profile: the "motion profile" of your path following. Should be a MoveScum object
+heading/theta: What angle you want your robot to be facing when moving. Note that this will execute first before any other movements. 0 will be the direction you face it when you init the robot.
+
+That should be all the important bits. Join 9266 Pyrobots and 4262 Ridgebots at Pacific Ridge School to receive more specific tutelage from our team members.
+This was a completely homebrew project for my team, I expect my teams, if no one else, to be using this library at least until a better option is found or created.
+
+Zhixun Wang, out.
