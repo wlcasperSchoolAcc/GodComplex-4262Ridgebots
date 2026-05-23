@@ -14,6 +14,8 @@ public class MoveScum {
         public double pos;
         public double v;
     }
+
+
     public Profile calculate(double totDist, double currTime){
         Profile state = new Profile();
 
@@ -57,5 +59,14 @@ public class MoveScum {
 
         return state;
     }
+
+    public double getMaxA() {
+        return maxA;
+    }
+
+    public double getMaxV() {
+        return maxV;
+    }
 }
+
 
