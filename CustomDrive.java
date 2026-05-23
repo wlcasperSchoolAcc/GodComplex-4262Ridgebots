@@ -56,17 +56,20 @@ public class CustomDrive {
         FR = hardwareMap.get(DcMotorEx.class, "FR");
         BR = hardwareMap.get(DcMotorEx.class, "BR");
 
+        FR.setDirection(DcMotorSimple.Direction.REVERSE);
+        BR.setDirection(DcMotorSimple.Direction.REVERSE);
+
         pinpoint = hardwareMap.get(GoBildaPinpointDriver.class, "pinpoint");
         pinpoint.setEncoderResolution(GoBildaPinpointDriver.GoBildaOdometryPods.goBILDA_4_BAR_POD);
-        pinpoint.setEncoderDirections(GoBildaPinpointDriver.EncoderDirection.FORWARD, GoBildaPinpointDriver.EncoderDirection.FORWARD);
+        pinpoint.setEncoderDirections(GoBildaPinpointDriver.EncoderDirection.FORWARD, GoBildaPinpointDriver.EncoderDirection.REVERSED);
         pinpoint.setOffsets(-130, 45, DistanceUnit.MM);
         pinpoint.resetPosAndIMU();
     }
 
     public void fieldrive(double fx, double fy, double rx, double heading){
         double botheading = Math.toRadians(heading);
-        double rotx = fx*Math.cos(botheading) - fy*Math.sin(botheading);
-        double roty = fx*Math.sin(botheading) + fy*Math.cos(botheading);
+        double rotx = fx*Math.cos(botheading) + fy*Math.sin(botheading);
+        double roty = -fx*Math.sin(botheading) + fy*Math.cos(botheading);
 
         drive(rotx, roty, rx);
     }
