@@ -19,6 +19,8 @@ You only need to know two values here. MaxV and MaxA. They stand for velocity an
 # GodObject
 After setup, this should be the only program you change on a regular basis. As stated in Overview, you will see a part with 4 points. Those are where you actually control the robot movements. There are two as of right now. To add more, simply make more Curves Objects, and more MoveScums if you need. Then, call followPath() inside the Opmode if statement. 
 
+Now, apologies for whiplash, but your movement values are now in INCHES. I repeat, INCHES. A foam mat is 24 inches x 24 inches. I expect you to figure out the rest. They are in doubles, so feel free to mess around with decimals.
+
 # followPath()
 followPath() takes 3 values:
 path: the path you want it to move along, should be a Curves object
