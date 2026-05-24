@@ -1,7 +1,10 @@
 ## GodComplex-4262Ridgebots
 
 Hello and welcome,
-This is GodComplex (name subject to change pending vote circa 9/24/2026), an FTC library (well, more like a group of programs) that is meant to offer a more intuitive, simpler way to enable robot movement across spline curves. It was made by me, and made for 4262 Ridgebots. This file is built to be a simple yet effective tutorial regarding this program. It's long enough to give details, and short enough that you won't bore yourself. Good luck, and have fun.
+
+This is GodComplex (name subject to change pending vote circa 9/24/2026), an FTC library (well, more like a group of programs) that is meant to offer a more intuitive, simpler way to enable robot movement across spline curves. It was made by me, and made for 4262 Ridgebots. This file is built to be a simple yet effective tutorial regarding this program. It's long enough to give details, and short enough that you won't bore yourself. 
+
+Good luck, and have fun.
 
 # Overview
 Put simply, you put in 4 points, of x and y, and specify a heading, theta. The first and last points are your start and end. The second and third points build a Bezier Curve (shown in Curves, if you want to figure out the algorithm yourself). The robot might not explicitly pass through these secondary points, but they influence the robot's path, allowing it to maneuver around obstacles in one smooth motion
@@ -16,6 +19,8 @@ Next, ensure your GoBilda odometry computer is set up. You will need a test code
 
 # Necessary Disclaimer
 If at this point you're asking me "How do I reverse a motor", you should not be looking at this, and should instead focus on learning the FTC documentation first.
+
+Oh, and if you're wondering about all the imports across all the programs. About 90% of those are useless and redundant. They are kept for convenience, since all those imports also happen to be enough for just about any Auton or TeleOp you write. Feel free to copy-paste them whenever.
 
 # MoveScum
 You only need to know two values here. MaxV and MaxA. They stand for velocity and acceleration respectively. Basically, they control how fast your robot starts to move and its top speed. If they are too high, the robot may just catapult itself into a wall, so be careful with this. Do not change anything inside the actual program, only through GodObject.
