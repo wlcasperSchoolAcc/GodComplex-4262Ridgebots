@@ -1,9 +1,13 @@
 ## GodComplex-4262Ridgebots
 
-Now that functionality has been completed, this will be an in-depth tutorial regarding this system.
+Hello and welcome,
+This is GodComplex (name subject to change pending vote circa 9/24/2026), an FTC library (well, more like a group of programs) that is meant to offer a more intuitive, simpler way to enable robot movement across spline curves. It was made by me, and made for 4262 Ridgebots. This file is built to be a simple yet effective tutorial regarding this program. It's long enough to give details, and short enough that you won't bore yourself. Good luck, and have fun.
 
 # Overview
 Put simply, you put in 4 points, of x and y, and specify a heading, theta. The first and last points are your start and end. The second and third points build a Bezier Curve (shown in Curves, if you want to figure out the algorithm yourself). The robot might not explicitly pass through these secondary points, but they influence the robot's path, allowing it to maneuver around obstacles in one smooth motion
+
+# Hardware
+The robot this was first tested on is a parallel plate chassis, with Yellowjacket motors from Gobilda. It utilizes the Gobilda Pinpoint Odometry Computer for its imu, as opposed to the Control Hub imu. The odometry wheels are the Gobilda 4-bar variant, although it is not hard to change it to the swing-arm variation. Personally, I reccomend 
 
 # Downloads and Setup
 You will need every single Java file for this to work. Furthermore, you will need to check the offsets of your odometry pods for the rotation system to work. Grab a ruler, and measure in millimeters. I repeat, MM, from the odo-pods to your robot center.
@@ -18,6 +22,9 @@ You only need to know two values here. MaxV and MaxA. They stand for velocity an
 
 # GodObject
 After setup, this should be the only program you change on a regular basis. As stated in Overview, you will see a part with 4 points. Those are where you actually control the robot movements. There are two as of right now. To add more, simply make more Curves Objects, and more MoveScums if you need. Then, call followPath() inside the Opmode if statement. 
+
+Next, you will have to tune the PID values. It's different for each robot, so the values I give will automatically be wrong for your robot. Of course, you can do it through this program, but it's reccomended to do it through a separate tuner TeleOp and the FTC dashboard. Tutorials can be found online.
+kV is it's feedforward component, basically just gives the robot an extra kick when it moves. Do with it whatever you wish.
 
 Now, apologies for whiplash, but your movement values are now in INCHES. I repeat, INCHES. A foam mat is 24 inches x 24 inches. I expect you to figure out the rest. They are in doubles, so feel free to mess around with decimals.
 
