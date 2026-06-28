@@ -4,6 +4,8 @@ Hello and welcome,
 
 This is GodComplex (name subject to change pending vote circa 9/24/2026), an FTC library (well, more like a group of programs) that is meant to offer a more intuitive, simpler way to enable robot movement across spline curves. It was made by me, and made for 4262 Ridgebots. This file is built to be a simple yet effective tutorial regarding this program. It's long enough to give details, and short enough that you won't bore yourself. 
 
+4262 Ridgebots and 9266 Pyrobots are teams of Pacific Ridge School, in Carlsbad, CA. Show up to some of our matches if you'd like.
+
 Good luck, and have fun.
 
 # Overview
